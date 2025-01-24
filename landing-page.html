@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteNexus</title>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    .container {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .color-logo-no {
+      position: absolute;
+      width: 235px;
+      height: 55px;
+      top: 85px;
+      left: 129px;
+      object-fit: cover;
+    }
+
+    .text-wrapper {
+      position: absolute;
+      width: 111px;
+      top: 91px;
+      left: 1080px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 26px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    /* ::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: #fff;
+  visibility: hidden;
+  transform: scaleX(.0001);
+  transition: transform .25s, visibility .25s;
+
+} */
+
+    .text-wrapper-2 {
+      position: absolute;
+      width: 78px;
+      top: 91px;
+      left: 975px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 26px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    a:-webkit-any-link {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .text-wrapper-3 {
+      position: absolute;
+      width: 107px;
+      top: 91px;
+      left: 1218px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 26px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .text-wrapper-4 {
+      position: absolute;
+      width: 80px;
+      top: 90px;
+      left: 1352px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 26px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .overlap-group {
+      position: absolute;
+      width: 121px;
+      height: 38px;
+      top: 86px;
+      left: 1456px;
+      background-color: #24e0d9cf;
+      border-radius: 33px;
+    }
+
+    .text-wrapper-5 {
+      position: absolute;
+      width: 129px;
+      top: 9px;
+      left: 7px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #ffffff;
+      font-size: 18px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .overlap {
+      position: absolute;
+      width: 1466px;
+      height: 615px;
+      top: 196px;
+      left: 129px;
+      background-color: #24e0d9cf;
+      border-radius: 33px;
+    }
+
+    .imageedit {
+      border-radius: 33px;
+      position: absolute;
+      width: 771px;
+      height: 615px;
+      top: 0;
+      left: 695px;
+      object-fit: cover;
+    }
+
+    .text-wrapper-6 {
+      position: absolute;
+      width: 570px;
+      top: 56px;
+      left: 486px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 101px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .text-wrapper-7 {
+      position: absolute;
+      width: 744px;
+      top: 200px;
+      left: 374px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 101px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .p {
+      position: absolute;
+      width: 622px;
+      top: 305px;
+      left: 424px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffffff;
+      font-size: 38px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .text-wrapper-8 {
+      position: absolute;
+      width: 497px;
+      top: 399px;
+      left: 486px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffffff;
+      font-size: 38px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .rectangle {
+      position: absolute;
+      width: 254px;
+      height: 86px;
+      top: 492px;
+      left: 609px;
+      background-color: #ffffff;
+      border-radius: 21px;
+    }
+
+    .text-wrapper-9 {
+      position: absolute;
+      width: 190px;
+      top: 504px;
+      left: 651px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #00cfc8;
+      font-size: 51px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .text-wrapper-10 {
+      position: absolute;
+      width: 646px;
+      top: 913px;
+      left: 552px;
+      -webkit-text-stroke: 1px #000000;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 56px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .journaling-is-a {
+      position: absolute;
+      width: 1098px;
+      top: 1038px;
+      left: 327px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 29px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .text-wrapper-11 {
+      position: absolute;
+      width: 174px;
+      top: 1099px;
+      left: 1278px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #707070;
+      font-size: 29px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .text-wrapper-12 {
+      position: absolute;
+      width: 351px;
+      top: 1293px;
+      left: 129px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #000000;
+      font-size: 50px;
+      letter-spacing: 0;
+      line-height: 16.8px;
+    }
+
+    .text-wrapper-13 {
+      position: absolute;
+      width: 829px;
+      top: 1358px;
+      left: 129px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 30px;
+      letter-spacing: 0;
+      line-height: 16.8px;
+      white-space: nowrap;
+    }
+
+    .journal-about-how {
+      position: absolute;
+      width: 784px;
+      top: 1415px;
+      left: 129px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 30px;
+      letter-spacing: 0;
+      line-height: 16.8px;
+    }
+
+    .text-wrapper-14 {
+      position: absolute;
+      width: 374px;
+      top: 1521px;
+      left: 129px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #000000;
+      font-size: 50px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .text-wrapper-15 {
+      position: absolute;
+      width: 773px;
+      top: 1589px;
+      left: 129px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 30px;
+      letter-spacing: 0;
+      line-height: 50px;
+    }
+
+    .text-wrapper-16 {
+      position: absolute;
+      width: 470px;
+      top: 1755px;
+      left: 129px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #000000;
+      font-size: 50px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .text-wrapper-17 {
+      position: absolute;
+      width: 815px;
+      top: 1817px;
+      left: 131px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 30px;
+      letter-spacing: 0;
+      line-height: 50px;
+    }
+
+    .text-wrapper-18 {
+      position: absolute;
+      width: 379px;
+      top: 2089px;
+      left: 687px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #00cfc8;
+      font-size: 55px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .efbe {
+      position: absolute;
+      width: 744px;
+      height: 412px;
+      top: 1434px;
+      left: 946px;
+      object-fit: cover;
+    }
+
+    .text-wrapper-19 {
+      position: absolute;
+      width: 962px;
+      top: 2238px;
+      left: 395px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 31px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .ebd {
+      position: absolute;
+      width: 470px;
+      height: 600px;
+      top: 2500px;
+      left: 1219px;
+      object-fit: cover;
+    }
+
+    .text-wrapper-20 {
+      position: absolute;
+      width: 464px;
+      top: 2701px;
+      left: 270px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #000000;
+      font-size: 50px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .text-wrapper-21 {
+      position: absolute;
+      width: 900px;
+      top: 2853px;
+      left: 270px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 32px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .bccfc {
+      position: absolute;
+      width: 332px;
+      height: 556px;
+      top: 3200px;
+      left: 170px;
+      object-fit: cover;
+    }
+
+    .text-wrapper-22 {
+      position: absolute;
+      width: 362px;
+      top: 3291px;
+      left: 734px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #000000;
+      font-size: 50px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .text-wrapper-23 {
+      position: absolute;
+      width: 876px;
+      top: 3441px;
+      left: 720px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 32px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .element {
+      position: absolute;
+      width: 470px;
+      height: 600px;
+      top: 3796px;
+      left: 1170px;
+      object-fit: cover;
+    }
+
+    .text-wrapper-24 {
+      position: absolute;
+      width: 494px;
+      top: 3987px;
+      left: 270px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #000000;
+      font-size: 50px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .text-wrapper-25 {
+      position: absolute;
+      width: 802px;
+      top: 4139px;
+      left: 270px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 32px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .text-wrapper-26 {
+      position: absolute;
+      width: 868px;
+      top: 4547px;
+      left: 430px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 80px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .text-wrapper-27 {
+      position: absolute;
+      width: 604px;
+      top: 4667px;
+      left: 562px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 80px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .text-wrapper-28 {
+      position: absolute;
+      width: 1295px;
+      top: 4829px;
+      left: 216px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 34px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .the-benefits-of {
+      position: absolute;
+      width: 435px;
+      top: 4899px;
+      left: 646px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 34px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .span {
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #707070;
+      font-size: 34px;
+      letter-spacing: 0;
+    }
+
+    .text-wrapper-29 {
+      text-decoration: underline;
+    }
+
+    .div-wrapper {
+      position: absolute;
+      width: 676px;
+      height: 122px;
+      top: 5025px;
+      left: 526px;
+      background-color: #00cfc8;
+      border-radius: 15px;
+    }
+
+    .text-wrapper-30 {
+      position: absolute;
+      width: 556px;
+      top: -3px;
+      left: 71px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffffff;
+      font-size: 43px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .img {
+      position: absolute;
+      width: 462px;
+      height: 350px;
+      top: 5382px;
+      left: 216px;
+    }
+
+    .img-2 {
+      top: 5251px;
+      left: 335px;
+      position: absolute;
+      width: 1057px;
+      height: 16px;
+    }
+
+    .text-wrapper-31 {
+      position: absolute;
+      width: 444px;
+      top: 5357px;
+      left: 836px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #000000;
+      font-size: 50px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .our-commitment-to {
+      position: absolute;
+      width: 652px;
+      top: 5436px;
+      left: 836px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #707070;
+      font-size: 29px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .text-wrapper-32 {
+      position: absolute;
+      width: 438px;
+      top: 5540px;
+      left: 899px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #515151;
+      font-size: 29px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .img-3 {
+      position: absolute;
+      width: 24px;
+      height: 21px;
+      top: 5578px;
+      left: 836px;
+    }
+
+    .img-4 {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: 5643px;
+      left: 836px;
+    }
+
+    .text-wrapper-33 {
+      position: absolute;
+      width: 398px;
+      top: 5606px;
+      left: 899px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #515151;
+      font-size: 29px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .img-5 {
+      position: absolute;
+      width: 22px;
+      height: 29px;
+      top: 5709px;
+      left: 840px;
+    }
+
+    .text-wrapper-34 {
+      position: absolute;
+      width: 324px;
+      top: 5706px;
+      left: 899px;
+      font-family: "Inter-Bold", Helvetica;
+      font-weight: 700;
+      color: #515151;
+      font-size: 29px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .img-6 {
+      top: 5917px;
+      left: 335px;
+      position: absolute;
+      width: 1057px;
+      height: 16px;
+    }
+
+    .img-7 {
+      top: 4449px;
+      left: 349px;
+      position: absolute;
+      width: 1057px;
+      height: 16px;
+    }
+
+    .img-8 {
+      top: 2021px;
+      left: 349px;
+      position: absolute;
+      width: 1057px;
+      height: 16px;
+    }
+
+    .text-wrapper-35 {
+      position: absolute;
+      width: 332px;
+      top: 6157px;
+      left: 682px;
+      font-family: "Inter-Regular", Helvetica;
+      font-weight: 400;
+      color: #818181;
+      font-size: 22px;
+      letter-spacing: 0;
+      line-height: 16px;
+      white-space: nowrap;
+    }
+
+    @media screen and (max-width:800px) {
+      .div {
+        overflow: auto;
+        font-family: 'lato', sans-serif;
+        background-color: #717171;
+      }
+
+      .overlap {
+        background-color: #72e8ff;
+        border-radius: 33px;
+        color: #ffffff;
+        overflow: auto;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- <div class="main"> -->
+    <header>
+      <img class="color-logo-no" src="./image/Color logo - no background.png" />
+      <div class="text-wrapper"><a href="#features" targrt="" ::after>Features</a></div>
+      <div class="text-wrapper-2"><a href="/index.html" target="_self">Home</a></div>
+      <div class="text-wrapper-3"><a href="/price.html" target="_self">Primium</a></div>
+      <div class="text-wrapper-4"><a href="/signin.html" target="_blank">Signin</a></div>
+      <div class="overlap-group"><a href="/freetrial.html" class="text-wrapper-5">Start free trial</a></div>
+    </header>
+    <div class="overlap">
+      <img class="imageedit" src="./image/Homepagecurve.png" />
+      <div class="text-wrapper-6">The journal</div>
+      <div class="text-wrapper-7">that talks back</div>
+      <p class="p">The AI-powered journal for mental</p>
+      <div class="text-wrapper-8">health and personal growth</div>
+      <div class="rectangle"></div>
+      <div class="text-wrapper-9">Try free</div>
+    </div>
+    <div class="text-wrapper-10">Start your journey today</div>
+    <p class="journaling-is-a">
+      Journaling is a proven way to completely change your life, especially when you stick with it over time. Each
+      time you write you&#39;ll get unparalleled clarity and life
+    </p>
+    <div class="text-wrapper-11">perspective.</div>
+    <div class="text-wrapper-12">1. Start writing</div>
+    <p class="text-wrapper-13">All you have to do is start. Take 5 minutes to write in your</p>
+    <p class="journal-about-how">journal about how you&#39;re feeling or reflect on the day.</p>
+    <div class="text-wrapper-14">2. Keep it going</div>
+    <p class="text-wrapper-15">
+      The more you write the easier it will be. Set reminders to keep a regular daily, weekly, or monthly cadence.
+    </p>
+    <div class="text-wrapper-16">3. Reflect and grow</div>
+    <p class="text-wrapper-17">
+      Links to your entries will be sent to you in the future so you can get see through clear window into the past.
+    </p>
+    <div class="text-wrapper-18">How it works?</div>
+    <img class="efbe" src="./image/e4fb65e.png" />
+    <p class="text-wrapper-19">
+      Instead of wondering what you should write about each day, NoteNexus is introducing a unique way of writing a
+      diary. It combines powerful diary and planner templates with reflective prompts to help you focus on the areas
+      of life you want to track and flourish in every way.
+    </p>
+    <img class="ebd" src="./image/ebd3379.png" />
+    <div class="text-wrapper-20">Unique grid format</div>
+    <p class="text-wrapper-21">
+      NoteNexus empowers you to focus on the areas of life you want to track and help you flourish in every way.
+    </p>
+    <img class="bccfc" src="./image/bccfc08.png" />
+    <div class="text-wrapper-22">Guided writing</div>
+    <p class="text-wrapper-23">
+      No more writer’s block, use profound prompts to help you reflect on your days and gain thrilling insights
+      about yourself.
+    </p>
+    <img class="element" src="./image/9b9e6dc.png" />
+    <div class="text-wrapper-24">More than just diary</div>
+    <p class="text-wrapper-25">
+      NoteNexus combines weekly, monthly and yearly diary, enables you to build your own journal and planner system.
+    </p>
+    <div class="text-wrapper-26">Start writing today and</div>
+    <div class="text-wrapper-27">change your life</div>
+    <p class="text-wrapper-28">People who keep a journal report being happier and healthier. Read more about</p>
+    <p class="the-benefits-of">
+      <span class="span">the </span>
+      <a href="https://www.usa.edu/blog/ways-journaling-benefits-students/" target="_blank" rel="noopener noreferrer">
+        <span class="text-wrapper-29">benefits of journaling</span><span>.</span>
+      </a>
+    </p>
+    <a href="/signup.html" target="_blank">
+      <div class="div-wrapper">
+        <p class="text-wrapper-30">Start your free journal now!</p>
+      </div>
+    </a>
+    <img class="img" src="./image/securty.svg" />
+    <img class="img-2" src="./image/line.svg" />
+    <div class="text-wrapper-31">For your eyes only</div>
+    <p class="our-commitment-to">
+      Our commitment to your privacy is not just an obligation, it&#39;s a vital part of our mission
+    </p>
+    <p class="text-wrapper-32">Only you can read your journal</p>
+    <img class="img-3" src="./image/right.svg" />
+    <img class="img-4" src="./image/wrong.svg" />
+    <p class="text-wrapper-33">We will never sell your data</p>
+    <img class="img-5" src="./image/lock.svg" />
+    <div class="text-wrapper-34">Your data is encrypted</div>
+    <img class="img-6" src="./image/line.svg" />
+    <img class="img-7" src="./image/line.svg" />
+    <img class="img-8" src="./image/line.svg" />
+    <p class="text-wrapper-35">Copyright © NextNexus. All rights reserved.</p>
+    <!-- </div> -->
+  </div>
+</body>
+
+</html>
